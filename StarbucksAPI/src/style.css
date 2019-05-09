@@ -1,0 +1,36 @@
+input[type=button]{
+    height: 40px;
+    width: 50px;
+    margin: 15px;
+    text-decoration-style: solid;
+    border-radius: 15px;
+    text-decoration-color: black;
+    font-size: 21px;
+}
+
+.grp{
+    display: inline-table;
+}
+
+input[type=text]{
+    height: 50px;
+    width: 25px;
+    text-decoration-style: solid;
+    font-size: 15px;
+    text-align: center;
+    outline: 20px;
+    border-color: black;
+    border-radius: 7px;
+}
+
+
+input[type=password]{
+    height: 50px;
+    width: 50px;
+    text-decoration-style: solid;
+    font-size: 15px;
+    text-align: center;
+    outline: 20px;
+    border-color: black;
+    border-radius: 7px;
+}
