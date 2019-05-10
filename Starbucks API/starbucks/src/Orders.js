@@ -14,7 +14,7 @@ class Orders extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://localhost:3001/orders').then(result => {
+        Axios.get('http://localhost:3001/orders').then(result => {
             this.setState({
                 cards: result.data
             })
@@ -22,7 +22,10 @@ class Orders extends Component {
     }
 
     render() {
-        
+        let redirectVar = '';
+        if((localStorage.getItem('cookie') != 1)){
+            redirectVar = <Redirect to='/'/>
+        }
         var displayCards = this.state.cards.map(card => {
             return (
                 <tr>
@@ -33,7 +36,7 @@ class Orders extends Component {
                     <td><small><button onClick={()=>{
                         const cardno = card.cardno;
                         const orderid = card._id;
-                        Axios.post('https://localhost:3001/cancelOrder', {cardno, orderid}).then(result=>{
+                        Axios.post('http://localhost:3001/cancelOrder', {cardno, orderid}).then(result=>{
                             alert(result.data.message);
                         })
                     }}>Cancel</button></small></td>
@@ -42,7 +45,7 @@ class Orders extends Component {
         })
         return (
             <div className="App">
-                
+                {redirectVar}
                 <h1>Welcome to Starbucks</h1>
                 <h3>Orders</h3>
                 <br/>

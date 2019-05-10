@@ -14,7 +14,7 @@ class Balance extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://localhost:3001/getCards').then(result => {
+        Axios.get('http://localhost:3001/getCards').then(result => {
             this.setState({
                 cards: result.data
             })
@@ -22,6 +22,10 @@ class Balance extends Component {
     }
 
     render() {
+        let redirectVar = '';
+        if((localStorage.getItem('cookie') != 1)){
+            redirectVar = <Redirect to='/'/>
+        }
         var displayCards = this.state.cards.map(card => {
             return (
                 <tr>
@@ -32,6 +36,7 @@ class Balance extends Component {
         })
         return (
             <div className="App">
+                {redirectVar}
                 <h1>Welcome to Starbucks</h1>
                 <h3>View Balances</h3>
                 <br/>

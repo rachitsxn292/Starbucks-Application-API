@@ -12,10 +12,10 @@ class Card extends Component{
                 <h6>{this.props.cardno}</h6>
                 <small><button onClick={()=>{
                     const cardno = this.props.cardno;
-                    Axios.post('https://localhost:3001/minusBalance', {cardno}).then(resultB=>{
+                    Axios.post('http://localhost:3001/minusBalance', {cardno}).then(resultB=>{
                         // alert(result.data.message);
                         if(resultB.status === 200 && resultB.data === true){
-                            Axios.post('https://localhost:3001/makeOrder', {cardno}).then(resultO=>{
+                            Axios.post('http://localhost:3001/makeOrder', {cardno}).then(resultO=>{
                                 alert(resultO.data.message);
                             })
                         }
@@ -27,7 +27,7 @@ class Card extends Component{
                 <br/><br/>
                 <small><button onClick={()=>{
                     const cardno = this.props.cardno;
-                    Axios.post('https://localhost:3001/removeCard', {cardno}).then(result=>{
+                    Axios.post('http://localhost:3001/removeCard', {cardno}).then(result=>{
                         alert(result.data.message);
                     })
                 }}>Remove Card</button></small>

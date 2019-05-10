@@ -26,7 +26,7 @@ class AddCard extends Component{
     getValue(){
         const {cardno} = this.state;
         const {cvv} = this.state;
-        Axios.post('https://localhost:3001/addCard', {cardno, cvv}).then(result=>{
+        Axios.post('http://localhost:3001/addCard', {cardno, cvv}).then(result=>{
             if(result.status === 200 && result.data === true){
                 alert('Card added successfully');
             }
@@ -37,9 +37,14 @@ class AddCard extends Component{
     }
 
     render(){
-        
+        let redirectVar = '';
+        if((localStorage.getItem('cookie') != 1)){
+            redirectVar = <Redirect to='/'/>
+        }
+
         return(
             <div className="App">
+                {redirectVar}
                 <h1>Welcome to Starbucks</h1>
                 <h3>Add Card</h3>
                 <div style={{height: '300px', width: '220px', display: 'inline-block'}}>

@@ -15,7 +15,7 @@ class MyCards extends Component {
     }
 
     componentDidMount() {
-        Axios.get('https://whispering-hollows-61823.herokuapp.com:3001/getCards').then(result => {
+        Axios.get('http://localhost:3001/getCards').then(result => {
             this.setState({
                 cards: result.data
             })
@@ -23,7 +23,10 @@ class MyCards extends Component {
     }
 
     render() {
-        
+        let redirectVar = '';
+        if((localStorage.getItem('cookie') != 1)){
+            redirectVar = <Redirect to='/'/>
+        }
         var displayCards = this.state.cards.map(card => {
             return (
                 <Card key={card._id} cardno={card.cardno} cvv={card.cvv} />
@@ -31,7 +34,7 @@ class MyCards extends Component {
         })
         return (
             <div className="App">
-               
+                {redirectVar}
                 <h1>Welcome to Starbucks</h1>
                 <h3>My Cards</h3>
                 <br/>
