@@ -1,7 +1,7 @@
 # teamproject-cmpe_202_team_s19
 teamproject-cmpe_202_team_s19 created by GitHub Classroom
 
-Extansion of  Personal Project and build a full end-to-end system for taking Starbucks Orders. 
+Extension of Personal Project to build full end-to-end system for taking Starbucks Orders. 
 
 
 5 APIS ARE IMPLEMENTED:
