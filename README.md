@@ -13,9 +13,10 @@ Extansion of  Personal Project and build a full end-to-end system for taking Sta
 5. REMOVE CARD
 
 
-
-TECHNOLOGY STACK USED:
+ STACK USED:
 
 FRONT END: REACTJS
+
 BACKEND: NODEJS
+
 DATABASE: MONGODB
