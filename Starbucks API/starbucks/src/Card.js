@@ -26,7 +26,7 @@ class Card extends Component{
                 }}>Scan Now</button></small>
                 <br/><br/>
                 <small><button onClick={()=>{
-                    
+                   
                 }}>Remove Card</button></small>
             </div>
         );
