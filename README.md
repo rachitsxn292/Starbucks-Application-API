@@ -23,3 +23,6 @@ DATABASE: MONGODB
 
 AWS EC2 Backend instance: http://ec2-18-204-130-151.compute-1.amazonaws.com:3000/
 Heroku Frontend: https://sheltered-dawn-68412.herokuapp.com/
+
+Task Sheet: https://docs.google.com/document/d/1nsjVULBfD7_Ecwq-
+0lNlAuAbNOQ1I0sYm7LMDGHSPig/edit?usp=sharing
