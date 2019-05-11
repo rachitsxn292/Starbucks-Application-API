@@ -87,7 +87,15 @@ app.post('/makeOrder', (req, res)=>{
     })
 })
 
-
+app.post('/removeCard', (req, res)=>{
+    const cardno = req.body.cardno;
+    Card.remove({cardno: cardno}).exec().then(result=>{
+        console.log(result);
+        res.status(200).json({
+            message: "Card Removed Successfully"
+        })
+    })
+});
 
 
 app.get('/orders', (req, res)=>{
@@ -96,7 +104,18 @@ app.get('/orders', (req, res)=>{
     })
 });
 
-
+app.post('/cancelOrder', (req, res)=>{
+    const cardno = req.body.cardno;
+    const orderid = req.body.orderid;
+    Card.update({cardno: cardno}, {$inc: {balance: 1.5}}).exec().then(resultU=>{
+        console.log(resultU);
+        Order.remove({_id: orderid, cardno: cardno}).exec().then(result=>{
+            res.status(200).json({
+                message: "Order Cancelled"
+            })
+        })
+    })
+})
 
 
 app.listen(3001);

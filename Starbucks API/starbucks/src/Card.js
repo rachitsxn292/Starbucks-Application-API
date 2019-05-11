@@ -26,7 +26,10 @@ class Card extends Component{
                 }}>Scan Now</button></small>
                 <br/><br/>
                 <small><button onClick={()=>{
-                   
+                    const cardno = this.props.cardno;
+                    Axios.post('https://localhost:3001/removeCard', {cardno}).then(result=>{
+                        alert(result.data.message);
+                    })
                 }}>Remove Card</button></small>
             </div>
         );
