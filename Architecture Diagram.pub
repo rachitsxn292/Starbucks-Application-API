@@ -1,0 +1,1 @@
+The client interacts with the system through the front end, which is deployed on Heroku.The requests are directed to the server through an EC2 Classic Load Balancer.The load balancer is used to increse system relaiblity while handling concureent requests.The requests recievd by the Load Balancer are sent to the backend server deployed on AWS CLoud.
