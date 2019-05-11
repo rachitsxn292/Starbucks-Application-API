@@ -14,23 +14,24 @@ input[type=button]{
 
 input[type=text]{
     height: 50px;
-    width: 25px;
+    width: 50px;
     text-decoration-style: solid;
-    font-size: 15px;
-    text-align: center;
+    font-size: 40px;
+    text-align: right;
     outline: 20px;
     border-color: black;
     border-radius: 7px;
 }
 
 
-input[type=password]{
-    height: 50px;
-    width: 50px;
-    text-decoration-style: solid;
-    font-size: 15px;
+.cardLayout{
     text-align: center;
-    outline: 20px;
-    border-color: black;
-    border-radius: 7px;
+    height: 120px;
+    width: 150px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 10px #888888 ;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-left: 5px solid #0055A2;
 }

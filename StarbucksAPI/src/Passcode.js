@@ -3,12 +3,7 @@ import './style.css'
 import './App.css';
 import MainScreen from './MainScreen';
 
-
 class Passcode extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="App">

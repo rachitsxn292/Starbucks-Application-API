@@ -1,22 +1,52 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './style.css'
 import './App.css';
 import Frame from './Frame';
+import Axios from 'axios';
+import {Redirect} from 'react-router';
 
-
-class Balance extends Component{
-    constructor(props){
+class Balance extends Component {
+    constructor(props) {
         super(props);
+        this.state = {
+            cards: []
+        }
     }
 
-    render(){
-        return(
+    componentDidMount() {
+        Axios.get('https://localhost:3001/getCards').then(result => {
+            this.setState({
+                cards: result.data
+            })
+        })
+    }
+
+    render() {
+        var displayCards = this.state.cards.map(card => {
+            return (
+                <tr>
+                    <td>{card.cardno}</td>
+                    <td>{card.balance}</td>
+                </tr>
+            )
+        })
+        return (
             <div className="App">
                 <h1>Welcome to Starbucks</h1>
-                <h3>Balance</h3>
-                <Frame/>
+                <h3>View Balances</h3>
+                <br/>
+                <div style={{height: '300px', width: '180px', display: 'inline-block', overflowY: 'scroll'}}>
+                    <table>
+                        <th>Card No</th>
+                        <th>Balance</th>
+                        <tbody>
+                            {displayCards}
+                        </tbody>
+                    </table>
+                </div>
+                <Frame />
             </div>
-        );
+        )
     }
 }
 

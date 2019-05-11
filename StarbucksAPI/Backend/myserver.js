@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Card = require('./models/card');
-var md5= require('md5');
+const Order = require('./models/orders');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -27,24 +27,36 @@ app.post('/pinValidation', (req, res)=>{
     }
 });
 
-app.post('/AddCard', function (req, res) {
-    var cardNumber = req.body.cardNumber;
-    var cvv = req.body.cvv;
-    cvv=md5(cvv);
-
-    const entry = new Card({
+app.post('/addCard', (req, res) => {
+    const {cardno} = req.body;
+    const {cvv} = req.body;
+    const card = new Card({
         _id: new mongoose.Types.ObjectId(),
-        cardNumber: req.body.cardNumber,
+        cardno: cardno,
         cvv: cvv,
-    })
-    console.log('In CardDetails');
-    entry.save().then(result => {
-        console.log(res);
-        res.status(200).send(true);
-    }).catch(err => console.log(err));
+        balance: 20
+    });
 
-
+    Card.find({cardno: cardno}).exec().then(result=>{
+        if(result.length > 0){
+            res.status(200).send(false);
+        }
+        else{
+            card.save().then(result=>{
+                console.log(result);
+                res.status(200).send(true);
+            })
+        }
+    });
 });
+
+app.get('/getCards', (req, res)=>{
+    Card.find({}).exec().then(result=>{
+        res.status(200).json(result);
+    })
+});
+
+
 
 
 app.listen(3001);

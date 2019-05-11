@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from './Button';
 import Display from './Display';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router';
 
 class MainScreen extends Component {
     constructor(props) {
@@ -97,13 +97,13 @@ class MainScreen extends Component {
                     // pin: this.state.d1+this.state.d2+this.state.d3+temp
                 })
                 const pin = this.state.d1 + this.state.d2 + this.state.d3 + temp;
-                axios.post('http://localhost:3001/pinValidation', { pin }).then(result => {
+                axios.post('https://whispering-hollows-61823.herokuapp.com:3001/pinValidation', { pin }).then(result => {
                     console.log(result);
                     if (result.status === 200 && result.data === true) {
+                        localStorage.setItem('cookie', 1);
                         this.setState({
                             authenticated: 1
                         })
-                        // localStorage.setItem('cookie', 1);
                     }
                     else {
                         this.setState({
