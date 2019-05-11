@@ -56,6 +56,46 @@ app.get('/getCards', (req, res)=>{
     })
 });
 
+app.post('/minusBalance', (req, res)=>{
+    const cardno = req.body.cardno;
+    Card.find({cardno: cardno}).exec().then(resultB=>{
+        console.log(resultB);
+        if(resultB[0].balance >= 1.50){
+            Card.update({cardno: cardno}, {$inc: {balance: -1.5}}).exec().then(resultU=>{
+                res.status(200).send(true);
+            })
+        }
+        else{
+            res.status(200).send(false);
+        }
+    })
+});
+
+
+app.post('/makeOrder', (req, res)=>{
+    const cardno = req.body.cardno;
+    const order = new Order({
+        _id: new mongoose.Types.ObjectId(),
+        cardno: cardno
+    });
+
+    order.save().then(result=>{
+        console.log(result);
+        res.status(200).json({
+            message: "Order Placed Successfully"
+        })
+    })
+})
+
+
+
+
+app.get('/orders', (req, res)=>{
+    Order.find({}).exec().then(result=>{
+        res.status(200).json(result);
+    })
+});
+
 
 
 
