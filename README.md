@@ -31,18 +31,24 @@ Flow of execution:
 1. AUTHENTICATION - Pranjal Sharma
 
 The default Authentication PIN for this application is "1234". On entering an invalid PIN, the text area will be restored to blank and the user will be notified with an "Invalid PIN" message and will be allowed to re-enter a valid PIN. The user will be navigated to the MYCards page on entering a correct Password.
-Other Contributions:
-Oversaw the whole development of the project from frontend to backend as well as its integration and deployment. Kept the project workflow simple and provided collaboration between all the team members. Also worked on the documentation part.
+
+  Other Contributions:
+  	Oversaw the whole development of the project from frontend to backend as well as its integration and deployment. Kept the 	project workflow simple and provided collaboration between all the team members.
+	
+	Deployed frontend on Heroku
 
 2. ADD CARD - Rachit Saxena
 
-The user has been provided with a provision of adding more than one cards. The user is asked to input the Card number and its CVV pin to add the card to records. A card number has to be of 9 digit and CVV of 3 digits. A card is loaded with $20 by default on registering.
-
-
+	The user has been provided with a provision of adding more than one cards. The user is asked to input the Card number and its CVV pin to add the card to records. A card number has to be of 9 digit and CVV of 3 digits. A card is loaded with $20 by default on registering.
+	
+   Other contributions:
+   
+   Deployed application on AWS EC2
+   
 
 3. MANAGE ORDERS - Shravani Pande
 
-   On clicking the 'Scan Now' for any of the available cards, an order wil be placed successfully if the available balance of the card is more than $1.5 (default). A transaction would fail if the available balance is less than $1.5. After successfully placing an oder, the balance of that card would be deducted by $1.5. A new order will be listed in the Orders list along with the time of placing the order. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
+	On clicking the 'Scan Now' for any of the available cards, an order wil be placed successfully if the available balance of the card is more than $1.5 (default). A transaction would fail if the available balance is less than $1.5. After successfully placing an oder, the balance of that card would be deducted by $1.5. A new order will be listed in the Orders list along with the time of placing the order. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
    
    Other contributions:
    
@@ -50,7 +56,7 @@ The user has been provided with a provision of adding more than one cards. The u
    
 4. MAKE PAYMENT - Nehal Sharma
 
-The deduction of balance for any order made is taken care of by this API. After successfully placing an oder, the balance of that card would be deducted by $1.5. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
+	The deduction of balance for any order made is taken care of by this API. After successfully placing an oder, the balance of that card would be deducted by $1.5. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
 
    Other contributions:
    
@@ -58,13 +64,13 @@ The deduction of balance for any order made is taken care of by this API. After 
 
 5. REMOVE CARD - Arkil Thakkar
 
-A User can remove his card from the listing. On doing so, the orders placed using this card would be canceled and cannot be seen in the order listing.
+	A User can remove his card from the list by clicking on remove card button. On doing so, the orders placed using this card would be canceled and cannot be seen in the order listing and a document will be deleted from cards collections.
 
    Other contributions:
    
    Build a Backend Skeleton using Express Js and connection with MongoDB.
 
- STACK USED:
+STACK USED:
 
 FRONT END: REACTJS
 
