@@ -30,12 +30,13 @@ Flow of execution:
 
 1. AUTHENTICATION - Pranjal Sharma
 
-The default Authentication PIN for this application is "1234". On entering an invalid PIN, the text area will be restored to blank and the user will be notified with an "Invalid PIN" message and will be allowed to re-enter a valid PIN. The user will be navigated to the MYCards page on entering a correct Password.
+	The default Authentication PIN for this application is "1234". On entering an invalid PIN, the text area will be restored to blank and the user will be notified with an "Invalid PIN" message and will be allowed to re-enter a valid PIN. The user will be navigated to the MYCards page on entering a correct Password.
 
   Other Contributions:
-  	Oversaw the whole development of the project from frontend to backend as well as its integration and deployment. Kept the 	project workflow simple and provided collaboration between all the team members.
+  	Oversaw the whole development of the project from frontend to backend as well as its integration and deployment.
+	Kept the project workflow simple and provided collaboration between all the team members.
+	Deployed Frontend on Heroku
 	
-	Deployed frontend on Heroku
 
 2. ADD CARD - Rachit Saxena
 
@@ -44,6 +45,7 @@ The default Authentication PIN for this application is "1234". On entering an in
    Other contributions:
    
    Deployed application on AWS EC2
+   Taskboard documentation
    
 
 3. MANAGE ORDERS - Shravani Pande
@@ -61,6 +63,7 @@ The default Authentication PIN for this application is "1234". On entering an in
    Other contributions:
    
    Build a Frontend Skeleton using React Js.
+   Architecture Diagram 
 
 5. REMOVE CARD - Arkil Thakkar
 
@@ -69,6 +72,7 @@ The default Authentication PIN for this application is "1234". On entering an in
    Other contributions:
    
    Build a Backend Skeleton using Express Js and connection with MongoDB.
+   XP values Documenatation 
 
 STACK USED:
 
