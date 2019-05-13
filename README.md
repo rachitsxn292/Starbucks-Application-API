@@ -38,6 +38,8 @@ Oversaw the whole development of the project from frontend to backend as well as
 
 The user has been provided with a provision of adding more than one cards. The user is asked to input the Card number and its CVV pin to add the card to records. A card number has to be of 9 digit and CVV of 3 digits. A card is loaded with $20 by default on registering.
 
+
+
 3. MANAGE ORDERS - Shravani Pande
 
    On clicking the 'Scan Now' for any of the available cards, an order wil be placed successfully if the available balance of the card is more than $1.5 (default). A transaction would fail if the available balance is less than $1.5. After successfully placing an oder, the balance of that card would be deducted by $1.5. A new order will be listed in the Orders list along with the time of placing the order. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
@@ -50,9 +52,17 @@ The user has been provided with a provision of adding more than one cards. The u
 
 The deduction of balance for any order made is taken care of by this API. After successfully placing an oder, the balance of that card would be deducted by $1.5. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
 
+   Other contributions:
+   
+   Build a Frontend Skeleton using React Js.
+
 5. REMOVE CARD - Arkil Thakkar
 
 A User can remove his card from the listing. On doing so, the orders placed using this card would be canceled and cannot be seen in the order listing.
+
+   Other contributions:
+   
+   Build a Backend Skeleton using Express Js and connection with MongoDB.
 
  STACK USED:
 
