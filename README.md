@@ -68,8 +68,7 @@ Architecture Diagram:
 
 ![Architecture](https://user-images.githubusercontent.com/47123250/57589199-86cdc880-74d5-11e9-921f-26ce81f2894a.PNG)
 
-Task Sheet: https://docs.google.com/document/d/1nsjVULBfD7_Ecwq-
-0lNlAuAbNOQ1I0sYm7LMDGHSPig/edit?usp=sharing
+Task Sheet: https://docs.google.com/document/d/1nsjVULBfD7_Ecwq-0lNlAuAbNOQ1I0sYm7LMDGHSPig/edit?usp=sharing
 
 To run this application on local:
 
