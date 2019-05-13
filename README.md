@@ -31,6 +31,8 @@ Flow of execution:
 1. AUTHENTICATION - Pranjal Sharma
 
 The default Authentication PIN for this application is "1234". On entering an invalid PIN, the text area will be restored to blank and the user will be notified with an "Invalid PIN" message and will be allowed to re-enter a valid PIN. The user will be navigated to the MYCards page on entering a correct Password.
+Other Contributions:
+Oversaw the whole development of the project from frontend to backend as well as its integration and deployment. Kept the project workflow simple and provided collaboration between all the team members. Also worked on the documentation part.
 
 2. ADD CARD - Rachit Saxena
 
