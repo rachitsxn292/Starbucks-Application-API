@@ -64,7 +64,8 @@ Flow of execution:
    Other contributions:
    
    Build a Frontend Skeleton using React Js.
-   Architecture Diagram 
+   Architecture Diagram
+   Presentation for the Demo
 
 5. REMOVE CARD - Arkil Thakkar
 
