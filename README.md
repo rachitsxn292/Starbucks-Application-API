@@ -40,6 +40,10 @@ The user has been provided with a provision of adding more than one cards. The u
 
    On clicking the 'Scan Now' for any of the available cards, an order wil be placed successfully if the available balance of the card is more than $1.5 (default). A transaction would fail if the available balance is less than $1.5. After successfully placing an oder, the balance of that card would be deducted by $1.5. A new order will be listed in the Orders list along with the time of placing the order. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
    
+   Other contributions:
+   
+   Designed the database and UI wireframes.
+   
 4. MAKE PAYMENT - Nehal Sharma
 
 The deduction of balance for any order made is taken care of by this API. After successfully placing an oder, the balance of that card would be deducted by $1.5. A user can Cancel a placed order and this action would credit an amount of $1.5 to the respective card.
